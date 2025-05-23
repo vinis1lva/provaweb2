@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Voluntários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-container">
+    <h2>Login</h2>
+    <input type="text" id="usuario" placeholder="Usuário">
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <div id="main-container" style="display:none;">
+    <nav>
+      <button onclick="mostrarSecao('cadastro')">Cadastro de Voluntário</button>
+      <button onclick="mostrarSecao('lista')">Lista de Voluntários</button>
+    </nav>
+
+    <section id="cadastro">
+      <h2>Cadastro</h2>
+      <input type="text" id="nome" placeholder="Nome">
+      <input type="email" id="email" placeholder="Email">
+      <input type="text" id="cep" placeholder="CEP" maxlength="8">
+      <button onclick="cadastrarVoluntario()">Cadastrar</button>
+      <p id="erro"></p>
+    </section>
+
+    <section id="lista" style="display:none;">
+      <h2>Lista de Voluntários</h2>
+      <input type="text" id="filtro" placeholder="Filtrar por nome" oninput="filtrarVoluntarios()">
+      <button onclick="limparTodos()">Limpar Tudo</button>
+      <div id="voluntarios"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

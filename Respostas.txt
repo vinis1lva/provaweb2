@@ -1,0 +1,35 @@
+1 - Como foi feita a integração com a API do ViaCEP? 
+
+A integração foi feita através de uma requisição fetch à API do ViaCEP, utilizando o CEP informado pelo usuário para obter o endereço correspondente.
+
+2 - Como a imagem aleatória foi gerada? 
+
+A imagem aleatória para cada voluntário foi gerada utilizando o serviço Unsplash Source, passando o nome do voluntário como parâmetro para obter uma foto única.
+
+3 - Como você utilizou o LocalStorage? 
+
+O localStorage foi utilizado para armazenar os voluntários cadastrados, permitindo persistência dos dados entre sessões do usuário.
+
+4 - Como você organizou os cards na tela? 
+
+Os cards foram estilizados com CSS e estruturados usando flexbox, garantindo uma apresentação organizada e responsiva.
+
+5 - Como foi implementado o sistema de login e controle de acesso? 
+
+O sistema de login verifica se o usuário digitou um nome e senha corretos (admin e 123) e armazena um status de logado no localStorage. Se o usuário estiver logado, 
+a seção principal do sistema é exibida.
+
+6 - Como foi feito o controle de e-mail duplicado? 
+
+O código não possui um controle de e-mail duplicado no cadastro. Para implementar essa verificação, seria necessário checar se o e-mail já existe na lista antes de 
+adicionar um novo voluntário.
+
+7 - Como foi implementado o redirecionamento após 5 minutos de inatividade? 
+
+Esse recurso não está implementado no código atual. Para adicioná-lo, seria necessário usar setTimeout e eventos de interação para resetar o temporizador sempre que o 
+usuário realizar alguma ação.
+
+8 - O que você faria diferente se fosse um projeto real? 
+
+Algumas melhorias poderiam ser feitas, como adicionar proteção contra e-mails duplicados, implementar uma base de dados real para armazenamento, melhorar a segurança 
+do login com hashing de senhas e incluir uma autenticação mais robusta.
